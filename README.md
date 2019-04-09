@@ -13,14 +13,17 @@ So that I can speak some Roman
 I want to translate a sentence where any numbers are converted in to Roman numerals
 ```
 
+Example input: `3 is a Roman numeral`
+Example output: `III is a Roman numeral`
+
+To simplify the initial challenge I will assume only numbers 1 to 9 are entered.  
+
 ### Feature test
 
 Imagining how to use it
 ```
 001 > roman_numerals = RomanNumerals.new
  => #<Translator:0x007fafdb81ea88>
-002 > sentence = "I was born in month 4 of the year 1987"
- => "I was born in month 4 of the year 1987"
-003 > roman_numerals.translate(sentence)
- => "I was born in month IV of the year MCMLXXXVII"
+002 > roman_numerals.translate("I was born in month 4")
+ => "I was born in month IV"
 ```
