@@ -15,22 +15,22 @@ class RomanNumerals
   end
 
   def translate(text)
-    find_numbers(text)
+    update_text(text)
   end
 
   private
 
   attr_reader :numerals
 
-  def find_numbers(text)
+  def update_text(text)
     text_array = text.chars.map do |letter|
-      if numerals.has_key?(letter)
-        convert_numbers(letter)
-      else
-        letter
-      end
+      match_numbers(letter) ? convert_numbers(letter) : letter
     end
     array_to_string(text_array)
+  end
+
+  def match_numbers(char)
+    numerals.has_key?(char)
   end
 
   def array_to_string(array)
