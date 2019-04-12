@@ -12,12 +12,12 @@ describe RomanNumerals do
     end
   end
 
-  describe '#convert_numbers' do
-    it 'accepts 3 and converts to III' do
-      expect(subject.convert_numbers("3")).to eq "III"
-    end
-    it 'accepts 4 and converts to IV' do
-      expect(subject.convert_numbers("4")).to eq "IV"
-    end
-  end
+  # describe '#convert_numbers' do
+  #   it 'accepts 3 and converts to III' do
+  #     expect(subject.convert_numbers("3")).to eq "III"
+  #   end
+  #   it 'accepts 4 and converts to IV' do
+  #     expect(subject.convert_numbers("4")).to eq "IV"
+  #   end
+  # end
 end

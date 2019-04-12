@@ -1,5 +1,5 @@
 class RomanNumerals
-  attr_reader :numerals
+
   def initialize
     @numerals = {
       "1" => "I",
@@ -15,14 +15,26 @@ class RomanNumerals
   end
 
   def translate(text)
-    converted_text = text.chars.map do |letter|
+    find_numbers(text)
+  end
+
+  private
+
+  attr_reader :numerals
+
+  def find_numbers(text)
+    text_array = text.chars.map do |letter|
       if numerals.has_key?(letter)
         convert_numbers(letter)
       else
         letter
       end
     end
-    converted_text.join
+    array_to_string(text_array)
+  end
+
+  def array_to_string(array)
+    array.join
   end
 
   def convert_numbers(number)
